@@ -16,6 +16,15 @@ def stringReverse(myString,list1) :
     '''
     문자열 myString을 뒤집어서 반환하는 함수를 작성하세요.
     '''
+
+    #강사코딩
+    # if len(myString) <= 1 :
+    #    return myString
+    # else :
+    #    return myString[-1] + \
+    #           stringReverse(myString[1:-1]) + \
+    #           myString[0]
+
     if myString == "" :
         myString = "".join(list1)
         return myString
@@ -39,5 +48,6 @@ def main():
     list1 = []
 
     print(stringReverse(myString,list1))
+    # print(stringReverse(myString))
 if __name__ == "__main__":
     main()

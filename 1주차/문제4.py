@@ -33,6 +33,12 @@ def GCD(x, y) :
     x, y의 최대공약수를 반환하는 함수
     '''
 
+    # 강사코딩
+    # if x%y == 0 :
+    #     return y
+    # else :
+    #     return GCD(y,(x % y))
+
     if x%y == 0 :
         return y
 
