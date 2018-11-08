@@ -27,7 +27,25 @@ def getSubsum(data) :
     n개의 숫자가 list로 주어질 때, 그 연속 부분 최대합을 반환하는 함수를 작성하세요.
     '''
 
-    return 0
+    '''
+    완전 탐색 방법으로 할 것이다.
+    start : 시작점
+    end : 끝점
+    '''
+
+    result = -999999999999
+
+    for start in range(0, len(data)) :
+        for end in range(start, len(data)) :
+
+            mySum = 0
+
+            for i in range(start, end+1) :
+                mySum += data[i]
+
+            result = max(result, mySum)
+
+    return result
 
 def main():
     '''
