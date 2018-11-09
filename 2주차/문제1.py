@@ -28,7 +28,24 @@ def diffDigit(a, b) :
     a, b의 서로 다른 자리수의 개수를 반환한다
     '''
 
-    return 0;
+    '''
+    1. 둘의 길이의 차이를 구하고
+    2. 차이수 만큼 자릿수에 ""로 채워줌
+    3. 큰 길이를 구해 for문으로 자릿수 하나씩 비교하여 
+    4. result에 쌓아줌
+    '''
+    # aList = list(str(a))
+    # bList = list(str(b))
+    # aListLen = len(aList)
+    # bListLen = len(bList)
+    # minLen = min(aListLen, bListLen)
+    # result = 0
+    #
+    # for i in range(minLen-1) :
+    #     if aList[(minLen-1)-i] != bList[(minLen-1)-i] :
+    #         result += 1
+    #
+    # return result;
 
 def main():
     '''
