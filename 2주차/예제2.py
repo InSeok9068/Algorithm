@@ -77,6 +77,7 @@ def powerSet(n):
 def main():
     '''
     이 부분은 수정하지 마세요.
+    재귀가 필요함!!
     '''
 
     n = int(input())
