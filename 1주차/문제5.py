@@ -39,6 +39,8 @@ def getPermutation(n, r):
     ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", dc"] 를 반환합니다.
     '''
 
+    #힌트 2주차 예제2번을 참고
+
     result = []
 
     return result
