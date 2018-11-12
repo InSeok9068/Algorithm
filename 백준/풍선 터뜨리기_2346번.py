@@ -44,9 +44,7 @@ def bang(n, myInput):
             result.append(input.index(bangVal)+1)     # 터진 위치값 저장
             val = myInput.index(bangVal)            # 터진 위치
         else :
-
-            if
-            abangVal = myInput[val]
+            abangVal = myInput[val+bangVal]
             result.append(input.index(abangVal) + 1)
             myInput.remove(bangVal)
             bangVal = abangVal
