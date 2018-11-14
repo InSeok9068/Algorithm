@@ -22,6 +22,9 @@
 
 import sys
 
+def getSlope(X,Y) :
+    return (Y[1] - Y[0]) / (X[1] - X[0])
+
 def maxSlope(points) :
     '''
     n개의 점들 중에서 2개의 점을 선택했을 때, 얻을 수 있는 기울기의 절댓값 중에서 가장 큰 값을 반환하는 함수를 작성하세요.

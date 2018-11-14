@@ -29,7 +29,13 @@ def numSubstr(A, B) :
     B가 A에 포함되어 있는 횟수를 반환하는 함수를 작성하세요.
     '''
 
-    return 0
+    if A == '' :
+        return 0
+
+    if B in A[0:len(B)] :
+        return 1 + numSubstr(A[1:], B)
+    else :
+        return numSubstr(A[1:], B)
 
 def main():
     '''

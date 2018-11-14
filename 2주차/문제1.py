@@ -34,18 +34,32 @@ def diffDigit(a, b) :
     3. 큰 길이를 구해 for문으로 자릿수 하나씩 비교하여 
     4. result에 쌓아줌
     '''
-    # aList = list(str(a))
-    # bList = list(str(b))
-    # aListLen = len(aList)
-    # bListLen = len(bList)
-    # minLen = min(aListLen, bListLen)
-    # result = 0
-    #
-    # for i in range(minLen-1) :
-    #     if aList[(minLen-1)-i] != bList[(minLen-1)-i] :
-    #         result += 1
-    #
-    # return result;
+    aList = list(str(a))
+    bList = list(str(b))
+    aListLen = len(aList)
+    bListLen = len(bList)
+    minLen = min(aListLen, bListLen)
+    maxLen = max(aListLen, bListLen)
+    betweenVal = maxLen - minLen
+    minList = []
+    maxList = []
+    result = 0
+
+    if minLen == aListLen :
+        minList = aList
+        maxList = bList
+    else :
+        minList = bList
+        maxList = aList
+
+    for i in range(betweenVal) :
+        minList.insert(0, '')
+
+    for i in range(maxLen) :
+        if maxList[i] != minList[i] :
+            result += 1
+
+    return result;
 
 def main():
     '''
