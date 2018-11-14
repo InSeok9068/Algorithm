@@ -23,7 +23,13 @@
 import sys
 
 def getSlope(X,Y) :
-    return (Y[1] - Y[0]) / (X[1] - X[0])
+    yVal = Y[1] - Y[0]
+    xVal = X[1] - X[0]
+
+    if xVal == 0 :
+        return 0
+    else :
+        return (yVal / xVal)
 
 def maxSlope(points) :
     '''
@@ -33,7 +39,16 @@ def maxSlope(points) :
                기울기의 최댓값을 구하는 것에 집중해 주시길 바랍니다.
     '''
 
-    return 0
+    points1 = []
+    result = -99999999999999
+
+    for i in range(len(points)):
+        points1 = points.copy()
+        points1.remove(points1[i])
+        for j in range(len(points1)):
+            result = max(result, getSlope(points[i], points1[j]))
+
+    return result
 
 def main():
     '''

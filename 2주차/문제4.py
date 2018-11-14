@@ -17,9 +17,9 @@ def getDist(points) :
     points1 = []
     result = 999999999999999999999
 
-    for i in range(len(points)-2) :
+    for i in range(len(points)-1) :
         points1 = points[i+1:]
-        for j in range(len(points1)-1) :
+        for j in range(len(points1)) :
             result = min(result, sqrt(points[i], points1[j]))
 
     return result
