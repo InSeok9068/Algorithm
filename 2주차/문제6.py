@@ -44,6 +44,8 @@ def nQueen(n) :
     n개의 Queen을 배치하는 경우의 수를 반환하는 함수를 작성하세요.
     '''
 
+    chess = [[]]
+
     return 0
 
 def main():
