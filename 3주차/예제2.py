@@ -23,7 +23,14 @@ def getPower(m, n):
     m^n 을 LIMIT_NUMBER로 나눈 나머지를 반환하는 함수를 작성하세요.
     '''
 
-    return 1
+    if n == 0 :
+        return 1
+    elif n % 2 == 0 :
+        temp = getPower(m , n//2)
+        return (temp * temp) % LIMIT_NUMBER
+    else :
+        temp = getPower(m, n-1)
+        return (temp * m) % LIMIT_NUMBER
 
 def main():
     '''
