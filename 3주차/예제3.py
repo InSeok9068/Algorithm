@@ -20,7 +20,40 @@ def mergeSort(data) :
     n개의 숫자를 합병정렬을 이용하여 정렬한 결과를 list로 반환하는 함수를 작성하세요.
     '''
 
+    '''
+    1. 왼쪽 정렬
+    2. 오른쪽 정렬
+    3. 합친다.
+    '''
+
+    if len(data) <= 1 :
+        return data
+
+    mid = len(data) // 2
+    left = mergeSort(data[:mid])
+    right = mergeSort(data[mid:])
+
+    '''
+    [1,2,4,5]      [2,4,6,8]
+     p              q
+    '''
+
     result = []
+    p = 0  #left
+    q = 0  #right
+
+    while p < len(left) and q < len(right) :
+        if left[p] <= right[q]:
+            result.append(left[p])
+            p += 1
+        else :
+            result.append(right[q])
+            q += 1
+
+    if p >= len(left) :
+        result = result + right[q:]
+    else :
+        result = result + left[p:]
 
     return result
 
