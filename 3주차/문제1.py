@@ -28,7 +28,13 @@ def binarySearch(data, m) :
     n개의 숫자 중에서 m이 존재하면 "Yes", 존재하지 않으면 "No"를 반환하는 함수를 작성하세요.
     '''
 
-    return "No"
+    if len(data) == 0 :
+        return "No"
+
+    if data[0] == m :
+        return "Yes"
+    else :
+        return binarySearch(data[1:],m)
 
 def main():
     '''
