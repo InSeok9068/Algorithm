@@ -21,11 +21,8 @@
 # # 1 4 5 3 2
 
 def ispos(string) :
-    if string == '' :
-        retrun False
-    eliff
-
-def bang(n, myInput):
+    return 0
+def bang(n, myInput) :
     '''
     모든 가로수가 같은 간격이 되도록 새로 심어야 하는 가로수의 최소수를 리턴하는 함수를 구현하세요.
     '''
@@ -51,7 +48,6 @@ def bang(n, myInput):
             val = myInput.index(abangVal)
 
     return result
-
 
 def main():
     '''
