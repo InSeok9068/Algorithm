@@ -16,6 +16,30 @@
 
 def makeRectangularShape(list):
     
+    xList = []
+    yList = []
+
+    x = 0
+    y = 0
+
+    for i in range(len(list)):
+        xList.append(list[i][0])
+        yList.append(list[i][1])
+
+    if xList[0] in xList[1:]:
+        xList.remove(xList[0])
+        x = xList[0]
+    else:
+        x = xList[0]
+
+
+    if yList[0] in yList[1:]:
+        yList.remove(yList[0])
+        y = yList[0]
+    else:
+        y = yList[0]
+
+    print(x,y)
 
 def main():
 
@@ -24,7 +48,7 @@ def main():
     for i in range(3) :
         list.append([int(x) for x in input().split()])
 
-    print(list)
+    makeRectangularShape(list)
 
 if __name__ == "__main__":
     main()
