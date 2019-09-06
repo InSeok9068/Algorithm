@@ -43,7 +43,7 @@ def mergeSort(data) :
     q = 0  #right
 
     while p < len(left) and q < len(right) :
-        if left[p] <= right[q]:
+        if left[p] >= right[q]:
             result.append(left[p])
             p += 1
         else :
