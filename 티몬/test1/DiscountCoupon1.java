@@ -17,9 +17,9 @@ public class DiscountCoupon1 extends Coupon{
     }
 
     public static void main(String[] args) {
-        DiscountCoupon1 discountCoupon1 = new DiscountCoupon2(1000);
-        int dp= discountCoupon1.getDiscountPrice();
-        discountCoupon1.order(dp);
+        //DiscountCoupon1 discountCoupon1 = new DiscountCoupon2(1000);
+        // int dp= discountCoupon1.getDiscountPrice();
+        // discountCoupon1.order(dp);
     }
 
     private final void validate(int discountPrice) {
